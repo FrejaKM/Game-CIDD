@@ -532,7 +532,7 @@ Transform:
   m_GameObject: {fileID: 117740421}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.1, y: 2.9, z: 4.87}
+  m_LocalPosition: {x: 29.1, y: 0, z: 5.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -625,7 +625,7 @@ Transform:
   m_GameObject: {fileID: 139113852}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.100002, y: 2.9, z: 15.8}
+  m_LocalPosition: {x: 29.100002, y: 0, z: 14.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2812,7 +2812,7 @@ Transform:
   m_GameObject: {fileID: 728864587}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.2, y: 2.9, z: -4.7}
+  m_LocalPosition: {x: -28.2, y: 0, z: -4.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3221,9 +3221,9 @@ MonoBehaviour:
     minSpawnInterval: 5
     maxSpawnInterval: 7
     carPrefabs:
-    - {fileID: 1149683447263825927, guid: 46e452dac48604cc4afa52f142bb4d93, type: 3}
-    - {fileID: 1149683447263825927, guid: 2e8267876c55e46999f67ef9e0a90146, type: 3}
-    - {fileID: 1149683447263825927, guid: 9caee6b4e24d94adb8667a347cc339f2, type: 3}
+    - {fileID: 6287957810964565578, guid: 80353dcbe26bc45d589c85747834df44, type: 3}
+    - {fileID: 586797883711163991, guid: dfbd8e477c8264c32a4de166cca84aa3, type: 3}
+    - {fileID: 1492075330807424219, guid: 8025fe22264c7477fb35590e158c4198, type: 3}
     spawnChance: 1
   - name: Lane 2 - Left to Right
     spawnPoint: {fileID: 728864588}
@@ -3232,9 +3232,9 @@ MonoBehaviour:
     minSpawnInterval: 4
     maxSpawnInterval: 7
     carPrefabs:
-    - {fileID: 1149683447263825927, guid: 46e452dac48604cc4afa52f142bb4d93, type: 3}
-    - {fileID: 1149683447263825927, guid: 2e8267876c55e46999f67ef9e0a90146, type: 3}
-    - {fileID: 1149683447263825927, guid: 9caee6b4e24d94adb8667a347cc339f2, type: 3}
+    - {fileID: 6287957810964565578, guid: 80353dcbe26bc45d589c85747834df44, type: 3}
+    - {fileID: 586797883711163991, guid: dfbd8e477c8264c32a4de166cca84aa3, type: 3}
+    - {fileID: 1492075330807424219, guid: 8025fe22264c7477fb35590e158c4198, type: 3}
     spawnChance: 1
   - name: Lane 3 - Right to Left
     spawnPoint: {fileID: 117740422}
@@ -3243,9 +3243,9 @@ MonoBehaviour:
     minSpawnInterval: 3
     maxSpawnInterval: 6
     carPrefabs:
-    - {fileID: 1149683447263825927, guid: 46e452dac48604cc4afa52f142bb4d93, type: 3}
-    - {fileID: 1149683447263825927, guid: 2e8267876c55e46999f67ef9e0a90146, type: 3}
-    - {fileID: 1149683447263825927, guid: 9caee6b4e24d94adb8667a347cc339f2, type: 3}
+    - {fileID: 6287957810964565578, guid: 3b6bf6e0cef364992af1c80130458720, type: 3}
+    - {fileID: 586797883711163991, guid: ad205d13552504deca735270c8603d4f, type: 3}
+    - {fileID: 1492075330807424219, guid: b9c873bbad1764b65a0b4102e5f7938f, type: 3}
     spawnChance: 1
   - name: Lane 4 - Right to Left
     spawnPoint: {fileID: 139113853}
@@ -3254,9 +3254,9 @@ MonoBehaviour:
     minSpawnInterval: 2
     maxSpawnInterval: 3
     carPrefabs:
-    - {fileID: 1149683447263825927, guid: 46e452dac48604cc4afa52f142bb4d93, type: 3}
-    - {fileID: 1149683447263825927, guid: 2e8267876c55e46999f67ef9e0a90146, type: 3}
-    - {fileID: 1149683447263825927, guid: 9caee6b4e24d94adb8667a347cc339f2, type: 3}
+    - {fileID: 6287957810964565578, guid: 3b6bf6e0cef364992af1c80130458720, type: 3}
+    - {fileID: 586797883711163991, guid: ad205d13552504deca735270c8603d4f, type: 3}
+    - {fileID: 1492075330807424219, guid: b9c873bbad1764b65a0b4102e5f7938f, type: 3}
     spawnChance: 1
 --- !u!4 &892122690
 Transform:
@@ -4651,7 +4651,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0d5f3c3e012664662ad36c784d1ab395, type: 3}
   m_PrefabInstance: {fileID: 1271435804}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 1243994888}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -24.4, y: 0, z: -14.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1271435804
+=======
 --- !u!1001 &1275240435
+>>>>>>> d44f8590a77d79d77b700f36312122758a2d9242
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
