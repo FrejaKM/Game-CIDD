@@ -367,6 +367,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 14ed60112d8cc4ab79666a2ea594379a, type: 3}
   m_PrefabInstance: {fileID: 75983421}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &117740421
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 117740422}
+  m_Layer: 0
+  m_Name: SpawnPoint3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &117740422
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117740421}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 29.1, y: 1.06, z: 4.87}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &127576124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -429,6 +460,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 14ed60112d8cc4ab79666a2ea594379a, type: 3}
   m_PrefabInstance: {fileID: 127576124}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &139113852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 139113853}
+  m_Layer: 0
+  m_Name: SpawnPoint4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &139113853
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139113852}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 29.100002, y: 1.06, z: 15.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &149259516
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,7 +859,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: 0, y: 2, z: -28.1}
+  m_LocalPosition: {x: 0, y: 3, z: -30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1852,6 +1914,37 @@ Transform:
   - {fileID: 1581998169}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &728864587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 728864588}
+  m_Layer: 0
+  m_Name: SpawnPoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &728864588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728864587}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -28.2, y: 1.06, z: -4.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &742764937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2070,6 +2163,95 @@ Transform:
   m_Children:
   - {fileID: 683146837}
   - {fileID: 1925359198}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &892122688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 892122690}
+  - component: {fileID: 892122689}
+  m_Layer: 0
+  m_Name: CarSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &892122689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892122688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc20e6792469f474f80190bc88498453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lanes:
+  - name: Lane 1 - Left to Right
+    spawnPoint: {fileID: 1243994889}
+    spawnMovingRight: 1
+    carSpeed: 3
+    minSpawnInterval: 5
+    maxSpawnInterval: 7
+    carPrefabs:
+    - {fileID: 1149683447263825927, guid: 46e452dac48604cc4afa52f142bb4d93, type: 3}
+    - {fileID: 1149683447263825927, guid: 2e8267876c55e46999f67ef9e0a90146, type: 3}
+    - {fileID: 1149683447263825927, guid: 9caee6b4e24d94adb8667a347cc339f2, type: 3}
+    spawnChance: 1
+  - name: Lane 2 - Left to Right
+    spawnPoint: {fileID: 728864588}
+    spawnMovingRight: 1
+    carSpeed: 5
+    minSpawnInterval: 4
+    maxSpawnInterval: 7
+    carPrefabs:
+    - {fileID: 1149683447263825927, guid: 46e452dac48604cc4afa52f142bb4d93, type: 3}
+    - {fileID: 1149683447263825927, guid: 2e8267876c55e46999f67ef9e0a90146, type: 3}
+    - {fileID: 1149683447263825927, guid: 9caee6b4e24d94adb8667a347cc339f2, type: 3}
+    spawnChance: 1
+  - name: Lane 3 - Right to Left
+    spawnPoint: {fileID: 117740422}
+    spawnMovingRight: 0
+    carSpeed: 8
+    minSpawnInterval: 3
+    maxSpawnInterval: 6
+    carPrefabs:
+    - {fileID: 1149683447263825927, guid: 46e452dac48604cc4afa52f142bb4d93, type: 3}
+    - {fileID: 1149683447263825927, guid: 2e8267876c55e46999f67ef9e0a90146, type: 3}
+    - {fileID: 1149683447263825927, guid: 9caee6b4e24d94adb8667a347cc339f2, type: 3}
+    spawnChance: 1
+  - name: Lane 4 - Right to Left
+    spawnPoint: {fileID: 139113853}
+    spawnMovingRight: 0
+    carSpeed: 12
+    minSpawnInterval: 2
+    maxSpawnInterval: 3
+    carPrefabs:
+    - {fileID: 1149683447263825927, guid: 46e452dac48604cc4afa52f142bb4d93, type: 3}
+    - {fileID: 1149683447263825927, guid: 2e8267876c55e46999f67ef9e0a90146, type: 3}
+    - {fileID: 1149683447263825927, guid: 9caee6b4e24d94adb8667a347cc339f2, type: 3}
+    spawnChance: 1
+--- !u!4 &892122690
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892122688}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &897469850
@@ -2771,6 +2953,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123056513}
   m_CullTransparentMesh: 1
+--- !u!1 &1243994888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1243994889}
+  m_Layer: 0
+  m_Name: SpawnPoint1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1243994889
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243994888}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -28.2, y: 1.06, z: -15.69}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1279263961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4237,3 +4450,8 @@ SceneRoots:
   - {fileID: 1031330068}
   - {fileID: 2090289023}
   - {fileID: 1307590274}
+  - {fileID: 892122690}
+  - {fileID: 728864588}
+  - {fileID: 139113853}
+  - {fileID: 1243994889}
+  - {fileID: 117740422}

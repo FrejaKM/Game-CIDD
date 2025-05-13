@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   movingRight: 1
-  despawnThreshold: 40
+  despawnThreshold: 30
 --- !u!1 &5890007140652100809
 GameObject:
   m_ObjectHideFlags: 0
