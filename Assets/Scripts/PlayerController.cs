@@ -20,6 +20,11 @@ public class PlayerController : MonoBehaviour
     // Speed at which the player moves.
     public float speed = 0;
     
+    // Drag settings to reduce unwanted rolling
+    public float regularDrag = 0.5f;      // Normal drag when moving
+    public float stoppingDrag = 3.0f;     // Higher drag when not providing input
+    public float rotationalDrag = 0.5f;   // Controls how quickly rotation slows down
+    
     // Jump force for controlling jump height
     public float jumpForce = 5.0f;
     
@@ -37,6 +42,10 @@ public class PlayerController : MonoBehaviour
     {
         // Get and store the Rigidbody component attached to the player.
         rb = GetComponent<Rigidbody>();
+        
+        // Apply initial drag settings
+        rb.linearDamping = regularDrag;
+        rb.angularDamping = rotationalDrag;
 
         // Initialize count to zero.
         count = 0;
@@ -73,11 +82,37 @@ public class PlayerController : MonoBehaviour
     // FixedUpdate is called once per fixed frame-rate frame.
     private void FixedUpdate() 
     {
-        // Create a 3D movement vector using the X and Y inputs.
-        Vector3 movement = new Vector3(movementX, 0.0f, movementY);
-
-        // Apply force to the Rigidbody to move the player.
-        rb.AddForce(movement * speed); 
+        // Check if player is providing movement input
+        bool hasInput = (Mathf.Abs(movementX) > 0.1f || Mathf.Abs(movementY) > 0.1f);
+        
+        // Adjust drag based on whether the player is trying to move
+        rb.linearDamping = hasInput ? regularDrag : stoppingDrag;
+        
+        // Only apply force if there's input
+        if (hasInput)
+        {
+            // Create a 3D movement vector using the X and Y inputs.
+            Vector3 movement = new Vector3(movementX, 0.0f, movementY);
+            
+            // Apply force to the Rigidbody to move the player.
+            rb.AddForce(movement * speed);
+        }
+        else if (isGrounded)
+        {
+            // Counter rolling by applying a counter force to the XZ velocity
+            // This helps the player stop more quickly when not providing input
+            Vector3 counterForce = -rb.linearVelocity;
+            counterForce.y = 0; // Don't affect vertical movement
+            
+            // Apply a mild counter force to slow down without feeling unnatural
+            rb.AddForce(counterForce * stoppingDrag * 0.5f, ForceMode.Acceleration);
+            
+            // Counter rotation as well
+            if (rb.angularVelocity.magnitude > 0.1f)
+            {
+                rb.angularVelocity *= 0.9f; // Reduce angular velocity by 10% each FixedUpdate
+            }
+        }
     }
 
     void OnTriggerEnter(Collider other) 

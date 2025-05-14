@@ -2155,7 +2155,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  jumpForce: 5
+  regularDrag: 0.1
+  stoppingDrag: 0.7
+  rotationalDrag: 0.2
+  jumpForce: 6
   countText: {fileID: 959101335}
   winTextObject: {fileID: 1123056513}
 --- !u!114 &347607272
@@ -4591,7 +4594,7 @@ Transform:
   m_GameObject: {fileID: 749450376}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.606766, y: -1.8050541, z: 3.5}
+  m_LocalPosition: {x: 18.606766, y: -1.8050541, z: 3.6}
   m_LocalScale: {x: 7.1056, y: 1, z: 1.3622782}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4623,7 +4626,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3336220917122640285, guid: 4f1d1fffc2c7d4dfa822124d26e2d6b2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.51
+      value: 4.1
       objectReference: {fileID: 0}
     - target: {fileID: 3336220917122640285, guid: 4f1d1fffc2c7d4dfa822124d26e2d6b2, type: 3}
       propertyPath: m_LocalPosition.z
