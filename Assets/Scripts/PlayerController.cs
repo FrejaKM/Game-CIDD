@@ -19,6 +19,12 @@ public class PlayerController : MonoBehaviour
 
     // Speed at which the player moves.
     public float speed = 0;
+    public float normalSpeed;  // Store the original speed value
+    
+    // Oil spill effect
+    public float oilSpillSpeedMultiplier = 10.4f;  // How much to reduce speed (30% of normal)
+    public float oilSpillExtraSlipperiness = 0.7f;  // Extra slipperiness on oil (lower value = more slippery)
+    private bool isOnOilSpill = false;
     
     // Drag settings to reduce unwanted rolling
     public float regularDrag = 0.5f;      // Normal drag when moving
@@ -42,6 +48,9 @@ public class PlayerController : MonoBehaviour
     {
         // Get and store the Rigidbody component attached to the player.
         rb = GetComponent<Rigidbody>();
+        
+        // Store the original speed for later reference
+        normalSpeed = speed;
         
         // Apply initial drag settings
         rb.linearDamping = regularDrag;
@@ -85,8 +94,11 @@ public class PlayerController : MonoBehaviour
         // Check if player is providing movement input
         bool hasInput = (Mathf.Abs(movementX) > 0.1f || Mathf.Abs(movementY) > 0.1f);
         
-        // Adjust drag based on whether the player is trying to move
-        rb.linearDamping = hasInput ? regularDrag : stoppingDrag;
+        // Adjust drag based on whether the player is trying to move and if on oil
+        float currentRegularDrag = isOnOilSpill ? regularDrag * oilSpillExtraSlipperiness : regularDrag;
+        float currentStoppingDrag = isOnOilSpill ? stoppingDrag * oilSpillExtraSlipperiness : stoppingDrag;
+        
+        rb.linearDamping = hasInput ? currentRegularDrag : currentStoppingDrag;
         
         // Only apply force if there's input
         if (hasInput)
@@ -99,18 +111,21 @@ public class PlayerController : MonoBehaviour
         }
         else if (isGrounded)
         {
+            // Counter rolling - reduced effect when on oil
+            float counterForceMagnitude = isOnOilSpill ? 0.2f : 0.5f;
+            
             // Counter rolling by applying a counter force to the XZ velocity
-            // This helps the player stop more quickly when not providing input
             Vector3 counterForce = -rb.linearVelocity;
             counterForce.y = 0; // Don't affect vertical movement
             
             // Apply a mild counter force to slow down without feeling unnatural
-            rb.AddForce(counterForce * stoppingDrag * 0.5f, ForceMode.Acceleration);
+            rb.AddForce(counterForce * currentStoppingDrag * counterForceMagnitude, ForceMode.Acceleration);
             
-            // Counter rotation as well
+            // Counter rotation as well - less effective on oil
+            float rotationDamping = isOnOilSpill ? 0.95f : 0.9f; // Higher value means less damping
             if (rb.angularVelocity.magnitude > 0.1f)
             {
-                rb.angularVelocity *= 0.9f; // Reduce angular velocity by 10% each FixedUpdate
+                rb.angularVelocity *= rotationDamping;
             }
         }
     }
@@ -129,6 +144,50 @@ public class PlayerController : MonoBehaviour
             // Update the count display.
             SetCountText();
         }
+        
+        // Check if the player entered an oil spill
+        if (other.gameObject.CompareTag("OilSpill"))
+        {
+            EnterOilSpill();
+        }
+    }
+    
+    void OnTriggerStay(Collider other)
+    {
+        // Ensure oil effect stays active as long as player is on the oil
+        if (other.gameObject.CompareTag("OilSpill"))
+        {
+            isOnOilSpill = true;
+        }
+    }
+    
+    void OnTriggerExit(Collider other)
+    {
+        // When the player exits an oil spill
+        if (other.gameObject.CompareTag("OilSpill"))
+        {
+            ExitOilSpill();
+        }
+    }
+    
+    // Function to apply oil spill effects
+    void EnterOilSpill()
+    {
+        isOnOilSpill = true;
+        speed = normalSpeed * oilSpillSpeedMultiplier;
+        
+        // Optional: Add visual feedback
+        Debug.Log("Entered oil spill - movement impaired!");
+    }
+    
+    // Function to remove oil spill effects
+    void ExitOilSpill()
+    {
+        isOnOilSpill = false;
+        speed = normalSpeed;
+        
+        // Optional: Add visual feedback
+        Debug.Log("Exited oil spill - movement restored!");
     }
 
     // Function to update the displayed count of "PickUp" objects collected.
