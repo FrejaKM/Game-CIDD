@@ -3,7 +3,17 @@ guid: d84c57147586944b793a230b865e5a8e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blueberry001
+    second: {fileID: 2100000, guid: 37d377190f55048afb924ec395c3a7d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dark blue.001
+    second: {fileID: 2100000, guid: cee79567468c74c299602331bf995730, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
