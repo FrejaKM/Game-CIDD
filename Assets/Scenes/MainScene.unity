@@ -5247,7 +5247,7 @@ MonoBehaviour:
     spawnMovingRight: 0
     carSpeed: 8
     minSpawnInterval: 3
-    maxSpawnInterval: 6
+    maxSpawnInterval: 5
     carPrefabs:
     - {fileID: 7204243825380493329, guid: 5097f3fcf625e4622a2710b285db7cb9, type: 3}
     - {fileID: 7756934491485908789, guid: 07df99321e8c342338dc3766617c3ace, type: 3}
@@ -5257,8 +5257,8 @@ MonoBehaviour:
     spawnPoint: {fileID: 139113853}
     spawnMovingRight: 0
     carSpeed: 12
-    minSpawnInterval: 4
-    maxSpawnInterval: 5
+    minSpawnInterval: 3
+    maxSpawnInterval: 4
     carPrefabs:
     - {fileID: 7204243825380493329, guid: 5097f3fcf625e4622a2710b285db7cb9, type: 3}
     - {fileID: 7756934491485908789, guid: 07df99321e8c342338dc3766617c3ace, type: 3}
