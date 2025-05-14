@@ -5721,7 +5721,7 @@ GameObject:
   - component: {fileID: 1256799418}
   - component: {fileID: 1256799417}
   m_Layer: 0
-  m_Name: StartGround (1)
+  m_Name: Lake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
