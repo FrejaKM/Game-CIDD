@@ -47,7 +47,11 @@ public class PlayerController : MonoBehaviour
     
     // Pickup
     [SerializeField] public AudioClip pickupSoundClip;
-    public float pickupSoundClipVolume = 1f;    
+    public float pickupSoundClipVolume = 1f;
+    
+    // Jump
+    [SerializeField] public AudioClip jumpSoundClip;
+    public float jumpSoundClipVolume = 1f;
 
     // Start is called before the first frame update.
     void Start()
@@ -90,6 +94,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            SoundFXManager.instance.PlaySoundFXClip(jumpSoundClip, transform, jumpSoundClipVolume);
             isGrounded = false;
         }
     }
