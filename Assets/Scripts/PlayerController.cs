@@ -42,6 +42,12 @@ public class PlayerController : MonoBehaviour
 
     // UI object to display winning text.
     public GameObject winTextObject;
+    
+    // Sound effects
+    
+    // Pickup
+    [SerializeField] public AudioClip pickupSoundClip;
+    public float pickupSoundClipVolume = 1f;    
 
     // Start is called before the first frame update.
     void Start()
@@ -140,6 +146,8 @@ public class PlayerController : MonoBehaviour
 
             // Increment the count of "PickUp" objects collected.
             count = count + 1;
+            
+            SoundFXManager.instance.PlaySoundFXClip(pickupSoundClip, transform, pickupSoundClipVolume);
 
             // Update the count display.
             SetCountText();
