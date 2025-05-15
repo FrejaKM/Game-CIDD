@@ -2696,6 +2696,51 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 462032039}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &466117890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 466117892}
+  - component: {fileID: 466117891}
+  m_Layer: 0
+  m_Name: SoundFXManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &466117891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466117890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5772b296550a54b4f9eb7acfbe7aa5a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundFXObject: {fileID: 3793885098968131122, guid: 0f30501a1be89403e972b72e9bc1f3c8, type: 3}
+--- !u!4 &466117892
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466117890}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.005609, y: 2.5070229, z: -22.58271}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &489000567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3703,6 +3748,8 @@ MonoBehaviour:
   jumpForce: 5
   countText: {fileID: 457230797}
   winTextObject: {fileID: 1014158502}
+  pickupSoundClip: {fileID: 8300000, guid: 13d5d59a68e524c67b80dea337603af4, type: 3}
+  pickupSoundClipVolume: 0.1
 --- !u!114 &693836354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12252,3 +12299,4 @@ SceneRoots:
   - {fileID: 1170815719}
   - {fileID: 693836359}
   - {fileID: 922946473}
+  - {fileID: 466117892}
